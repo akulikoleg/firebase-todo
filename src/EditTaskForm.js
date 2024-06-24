@@ -9,6 +9,8 @@ function EditTaskForm(props){
     //state for title of the rack
     const [title, setTitle] = useState('');
 
+    //hide form if id null
+    if(!props.id) return null;
 
     //function to handle the form submission
     const handleSubmit = (e) => {
@@ -18,8 +20,6 @@ function EditTaskForm(props){
 
     };
 
-    //hide form if id null
-    if(!props.id) return null;
 
     return (
         <form>
