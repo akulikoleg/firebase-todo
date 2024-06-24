@@ -7,10 +7,18 @@ import TaskList from "./TaskList";
 
 function App() {
 
+    const [editTaskId, setEditTaskId] = useState(null);
+
+    const onEdit = (id) => {
+        console.log(id);
+    }
+
+
   return (
     <div >
         <CreateTaskForm/>
-        <TaskList/>
+        <TaskList onEdit={onEdit}/>
+        
     </div>
 
   );
