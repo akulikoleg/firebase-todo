@@ -23,6 +23,7 @@ function CreateTaskForm(){
 
     };
 
+    if(!title) return null;
 
     return (
         <form>

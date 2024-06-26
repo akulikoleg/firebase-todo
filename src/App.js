@@ -5,20 +5,26 @@ import CreateTaskForm from "./CreateTaskForm";
 import TaskList from "./TaskList";
 import EditTaskForm from "./EditTaskForm";
 
+
 function App() {
 
     const [editTaskId, setEditTaskId] = useState(null);
 
     const onEdit = (id) => {
-        console.log(id);
+        setEditTaskId(id);
+    }
+
+    const onEditCancel = () => {
+        setEditTaskId(null);
+
     }
 
   return (
-    <div >
+    <div className="App">
         <CreateTaskForm/>
         <TaskList onEdit={onEdit}/>
-        <EditTaskForm id={editTaskId} />
-        
+        <EditTaskForm id={editTaskId} onCancel={onEditCancel} />
+
     </div>
 
   );
